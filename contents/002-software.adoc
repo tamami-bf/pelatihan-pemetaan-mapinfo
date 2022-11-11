@@ -1,0 +1,131 @@
+== PENGENALAN _SOFTWARE_
+
+
+=== Membuka Program
+
+[.text-justify]
+1. Pilih *Start->Program->MapInfo->MapInfo 8*. Muncul tampilan jendela berikut :
++
+.Jendela awal MapInfo 8
+image::000-start-mapinfo8.png[]
++
+2. Klik *Cancel* pada _box Quick Start_
++
+3. _Drag box_ *Main* dan *Standard* ke atas, tempatkan di bawah menu utama, menjadi seperti tampilan berikut :
++
+.Posisi *Icon* Yang Telah Dirapihkan
+image::001-rapih-icon.png[]
+
+
+=== Membuat File Baru
+
+[.text-justify]
+1. Pilih *File->New Table*, sehingga muncul tampilan berikut :
++
+.Jendela Membuat File Baru
+image::002-new-mapper.png[]
++
+2. Kemudian tekan tombol *Create* sehingga muncul jendela berikut :
++
+.Jendela pembentukan field tabel
+image::003-pembentukan-tabel.png[]
++
+3. Untuk pengisian nama _field_, nantinya akan disesuaikan dengan jenis _layer_ / lapisan yang akan kita bangun. Sebagai contoh, apabila nanti akan membuat _layer_ bidang, akan ada _field_ *d_nop* untuk menyimpan NOP bidangnya, apabila nanti akan membuat _layer_ jalan, maka akan ada _field_ *d_nm_jln* untuk menyimpan nama jalan.
++
+[.text-justify]
+Sebagai referensi pembuatan _field-field_ apa saja yang dibentuk sesuai dengan kondisi _layer_-nya, maka berikut disajikan aturan penamaan _field_ sesuai dengan Peraturan Bupati Brebes Nomor 111 Tahun 2013 tentang Pedoman Pendaftaran, Pendataan, Penilaian, dan Pelaporan Objek dan Subjek Pajak Bumi dan Bangunan Perdesaan dan Perkotaan di Kabupaten Brebes.
++
+a. _Layer_ Tanah/Bidang
++
+[.text-justify]
+_Layer_ ini berisi tanah/bidang objek pajak dalam satu Desa/Kelurahan, dimana penamaan _file_ mengikuti aturan `3329KKKLLL`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
++
+Gambar memiliki tipe *polygon*, dengan _Fill Pattern_ *none*, _Border Style_ *Garis penuh*, _Color_ *Black*, _width_ *0,17mm*
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_nop 
+|character(18) 
+|index 1 
+|NOP setiap bidang tanah
+
+|d_luas 
+|decimal(10,2) 
+| 
+|Luas Bidang tanah dengan menggunakan _update column_ terhadap _field_ *d_luas* dengan _value assist function area_
+|===
++
+b. _Layer_ Bangunan
++
+[.text-justify]
+_Layer_ ini berisi gambar denah bangunan dalam satu Desa/Kelurahan, dimana penamaan _file_ mengikuti aturan `3329KKKLLLbg`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
++
+[.text-justify]
+Gambar memiliki tipe *polygon*, _Fill Pattern_ (*MapInfo No. 5*), _Foreground_ (*MapInfo no. 7*), _Background_ *none*, _Border Style_ *Garis Putus* (_line style *MapInfo No. 5*, _Color_ *Hijau*, _width_ *0,17mm*)
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_nop
+|character(21)
+|Index 1
+|NOP ditambah nomor bangunan setiap bangunannya.
+|===
++
+c. _Layer_ Jalan
++
+_Layer_ ini berisi gambar jalan dalam satu Desa/Kelurahan, dimana penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKKLLLjl`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
++
+Gambar memiliki tipe *Polyline*, _Style_ *Garis Penuh*, _color_ *red*, _width_ *0,17mm*
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_nm_jln
+|character(30)
+|
+|Nama Jalan
+
+|d_lbr_jln
+|Integer
+|
+|Lebar jalan (rata-rata lebar pada jalan tersebut)
+|===
++
+d. _Layer_ Sungai
++
+_Layer_ ini berisi gambar sungai dalam satu Desa/Kelurahan, dimana penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKKLLLsg`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
++
+Gambar memiliki tipe *polyline*, _style_ *Garis penuh*, _color_ *blue*, _width_ *0,17mm*
++
+[cols="1,1,1,1"]
+|===
+
++
+e. _Layer_ Text
++
+f. _Layer_ Batas Blok
++
+g. _Layer_ Simbol
++
+h. _Layer_ Batas Kelurahan
++
+i. _Layer_ Batas Kecamatan
++
+j. _Layer_ Batas Kabupaten
+
+
+=== Membuat Layer
