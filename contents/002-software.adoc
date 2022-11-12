@@ -83,8 +83,10 @@ Gambar memiliki tipe *polygon*, _Fill Pattern_ (*MapInfo No. 5*), _Foreground_ (
 +
 c. _Layer_ Jalan
 +
+[.text-justify]
 _Layer_ ini berisi gambar jalan dalam satu Desa/Kelurahan, dimana penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKKLLLjl`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
 +
+[.text-justify]
 Gambar memiliki tipe *Polyline*, _Style_ *Garis Penuh*, _color_ *red*, _width_ *0,17mm*
 +
 [cols="1,1,1,1"]
@@ -107,25 +109,265 @@ Gambar memiliki tipe *Polyline*, _Style_ *Garis Penuh*, _color_ *red*, _width_ *
 +
 d. _Layer_ Sungai
 +
+[.text-justify]
 _Layer_ ini berisi gambar sungai dalam satu Desa/Kelurahan, dimana penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKKLLLsg`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
 +
+[.text-justify]
 Gambar memiliki tipe *polyline*, _style_ *Garis penuh*, _color_ *blue*, _width_ *0,17mm*
 +
 [cols="1,1,1,1"]
 |===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
 
+|d_nm_sng
+|character(30)
+|
+|Nama Sungai
+
+|d_lbr_sng
+|integer
+|
+|Lebar sungai (rata-rata lebar pada sungai tersebut)
+|===
 +
 e. _Layer_ Text
 +
+[.text-justify]
+_Layer_ ini berisi keterangan teks dalam satu Desa/Kelurahan, penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKKLLLtx`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa.
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_text
+|character(30)
+|
+|Sebagai penjelas / keterangan pada bidang cetak peta
+|===
++
+kolom `d_text` dapat berisi :
++
+[.text-justify]
+* Teks mengenai keseluruhan nama utilitas jalan, sungai, informasi nama wilayah yang bersebelahan, informasi lokasi penting, dan sebagainya, yang tidak terdapat termasuk _layer-layer_ lain berwarna hitam dengan tipe huruf _italic_ berukuran sesuai dengan gambar.
+* Batas tepi jalan diperkeras berwarna merah ukuran garis paling tipis
+* Batas tepi jalan tidak diperkeras berwarna coklat kekuningan berukuran garis paling tipis
+* Batas tepi jalan TOL berwarna merah berukuran garis tipis no. 2,
+* Batas tepi sungai berwarna biru berukuran garis tipis no. 2,
+* Utilitas yang disertai dengan simbolnya.
++
 f. _Layer_ Batas Blok
++
+[.text-justify]
+_Layer_ ini menggambarkan batas blok dalam suatu Desa/Kelurahan, penamaan _file_ mengikuti aturan `3329KKKLLLbl`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Kelurahan/Desa. Gambar memiliki _tipe_ *Polygon*, _fill pattern_ *None*, _border style_ *garis putus dan titik* (_line style_ *MapInfo Nomor 13*, _color_ *blue*, _width_ *0,25mm*.)
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_blok
+|character(13)
+|
+|Kode Wilayah + Nomor Blok
+|===
 +
 g. _Layer_ Simbol
 +
+[.text-justify]
+_Layer_ ini digunakan untuk memberikan simbol simbol umum pada peta dalam satu Desa/Kelurahan. Penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKKLLLsi`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan, dan `LLL` berisi 3 (tiga) digit kode Desa/Kelurahan.
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_kd_simbol
+|character(4)
+|
+|Kode simbol
+|===
++
+_Rincian Layer Simbol_
++
+[cols="1,1"]
+|===
+|*Kode Simbol*
+|*Uraian Simbol*
+
+|1
+|Kuburan Islam
+
+|2
+|Kuburan Kristen
+
+|3
+|Kuburan Lainnya
+
+|4
+|Masjid
+
+|5
+|Gereja
+
+|6
+|Candi
+
+|7
+|Pura/Puri
+
+|8
+|Klenteng
+
+|9
+|Kantor
+
+|10
+|Titik Triangulasi
+
+|11
+|Tugu / Titik Polygon
+|===
++
 h. _Layer_ Batas Kelurahan
++
+[.text-justify]
+_Layer_ ini berisi gambar batas wilayah administrasi tiap Desa/Kelurahan dalam satu Kecamatan. Penamaan _file_ untuk _layer_ ini mengikuti aturan `3329KKK`, dimana `KKK` berisi 3 (tiga) digit kode Kecamatan. 
++
+[.text-justify]
+Gambar memiliki _tipe_ *Polygon*, _fill pattern_ *none*, _border style_ *garis putus* (_line style_ *MapInfo Nomor 7*), _color_ *black*, _width_ *1 mm*.
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_kd_kel
+|character(10)
+|
+|Kode Wilayah Kelurahan
+
+|d_nm_kel
+|character(25)
+|
+|Nama Kelurahan
+|===
 +
 i. _Layer_ Batas Kecamatan
 +
+[.text-justify]
+_Layer_ ini berisi gambar batas administrasi untuk tiap Kecamatan dalam 1 (satu) Kabupaten/Kota. Penamaan _file_ untuk _layer_ ini hanya 3329, karena gambarnya hanya berisi batas administrasi Kecamatan di Kabupaten Brebes.
++
+[.text-justify]
+Gambar memiliki _tipe_ *Polygon*, _fill pattern_ *none*, _border style_ *garis putus* (_line style_ *MapInfo Nomor 7*), _color_ *black*, _width_ *1 mm*.
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_kd_kec
+|character(7)
+| 
+|Kode wilayah Kecamatan
+
+|d_nm_kec
+|character(25)
+|
+|Nama Kecamatan
+|===
++
 j. _Layer_ Batas Kabupaten
++
+[.text-justify]
+_Layer_ ini berisi gambar batas administrasi Kabupaten, karena wilayah yang dibutuhkan hanya Kabupaten Brebes, maka hanya ada 1 (satu) _file_ untuk _layer_ ini dengan nama _file_ diisikan `33`.
++
+[.text-justify]
+Gambar memiliki _tipe_ *Polygon*, _fill pattern_ *none*, _border style_ *garis positif* (_line style_ *MapInfo nomor 32*), _color_ *black*, _width_ *1 mm*
++
+[cols="1,1,1,1"]
+|===
+|*Nama _Field_*
+|*_Type_*
+|*Index*
+|*Keterangan*
+
+|d_kd_dt2
+|character(4)
+|
+|Kode wilayah Daerah Kabupaten/Kota
+
+|d_nm_dt2
+|character(25)
+|
+|Nama Daerah Kabupaten/Kota
+|===
 
 
 === Membuat Layer
+
+[.text-justify]
+1. Membuat _workspace_ baru atau membuka _file_ yang sudah ada.
+2. Pilih *Map->Layer Control*, atau cukup melakukan klik ikon image:004-ikon-layer-kontrol.png[fit=line]. Sehingga akan tampil jendela berikut :
++
+.Jendela _Layer Control_
+image::005-jendela-layer-control.png[]
++
+3. Pastikan bahwa _file_ ini sudah dalam kondisi dapat di-_edit_. Lalu pilih *OK*. Ciri-ciri bahwa _layer_ ini sudah dapat di-_edit_ dapat dilihat tanda centang pada gambar berikut :
++
+.Layer dapat di-_edit_
+image::006-mode-edited.png[]
++
+4. Buat objek titik, garis, atau poligon dengan melakukan klik pada ikon-ikon berikut :
++
+.Ikon untuk Membuat Objek
+image::007-ikon-drawing.png[]
++
+5. Jika selesai, simpan dengan memilih menu *File->Save Table->Save*.
+
+
+=== Mengedit _file_
+
+[.text-justify]
+1. Buka _file_ yang sudah dibuat, atau buat _layer_ baru, lalu pastikan _file_ dalam kondisi dapat di-edit dengan melakukan klik *Map->Layer Control* sehingga tampil jendela seperti Gambar 6.
+2. Pilih objek yang akan di edit dengan melakukan klik ikon *select* seperti ini image:008-ikon-select.png[fit=line]
+3. Pilih ikon *Reshape* untuk menampilkan _vertex_, yang berbentuk seperti ini image:009-ikon-reshape.png[fit=line] klik salah satu _vertex_ lalu tarik ke arah lain.
++
+Sebagai contoh, bentuk objek yang akan kita ubah dengan fungsi _reshape_ adalah seperti ini :
++
+.Bentuk Bidang Sebelum dilakukan _Reshape_
+image::010-sebelum-reshape.png[]
++
+Dan contoh bentuk objek setelah kita ubah dengan fungsi _reshape_ menjadi seperti ini :
++
+.Bentuk Bidang Setelah dilakukan _Reshape_
+image::011-sesudah-reshape.png[]
+
+
+=== Operasi Penggabungan (_Combine_)
+
+
+=== Operasi Pemisahan (_Split_)
+
+
+=== Operasi Pemotongan 1 (_Erase_)
+
+
+=== Operasi Pemotongan 2 (_Erase Outside_)
+
+
+=== Menyambung Vertex (_Snap_)
+
