@@ -33,3 +33,5 @@ Use this if you create a full cover in one page
 
 include::{includedir}/001-pengenalan.adoc[]
 include::{includedir}/002-software.adoc[]
+include::{includedir}/003-koordinat.adoc[]
+include::{includedir}/004-query.adoc[]

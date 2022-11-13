@@ -1,0 +1,34 @@
+== KOORDINAT
+
+[.text-justify]
+Koordinat atau alamat keberadaan / posisi suatu wilayah dijabarkan ke dalam angka. Koordinat yang sering digunakan ada 2 (dua) jenis, yaitu koordinat geografi dan koordinat UTM (_Universal Transversal Mercator).
+
+[.text-justify]
+* Contoh koordinat Geografi
++
+X = 108^0^30'50"; Y = 7^0^30'50" 
++
+* Contoh Koordinat UTM
++
+X = 480000; Y=9800000
+
+[.text-justify]
+Datum titik nadir (konstanta / ketetapan), bumi bentuknya bulat sedangkan derajat / geografi dijabarkan di bidang datar dengan dibuat _grid_ dan diberikan nomor. Tahun survei terbaru adalah tahun 1984 sehingga dikenal dengan *WGS1984*.
+
+[.text-justify]
+Pemilihan proyeksi *WGS1984* dilakukan dengan memilih menu *Map->Options*, sehingga akan muncul jendela berikut :
+
+.Jendela Map Options
+image::045-jendela-map-option.png[]
+
+[.text-justify]
+Kemudian klik *Projection*, sehingga muncul jendela _projection_ seperti berikut :
+
+.Jendela Projection
+image::046-jendela-projection.png[]
+
+[.text-justify]
+Terakhir memilih kategori *Universal Transverse  Mercator (WGS 84)*, kemudian memilih UTM Zone 49 pada *Category Members* dan menekan tombol *OK*, karena posisi Kabupaten Brebes berada pada Zona 49 UTM / WGS84, seperti gambar berikut :
+
+.Pemilihan UTM WGS 84 Zone 49 S
+image::047-pemilihan-utm-wgs84.png[]

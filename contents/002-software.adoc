@@ -355,19 +355,185 @@ Dan contoh bentuk objek setelah kita ubah dengan fungsi _reshape_ menjadi sepert
 +
 .Bentuk Bidang Setelah dilakukan _Reshape_
 image::011-sesudah-reshape.png[]
++
+4. Pilih ikon *Add Node* untuk menambah _vertex_. Bentuk ikonnya seperti ini image:012-ikon-add-node.png[fit=line]
 
 
 === Operasi Penggabungan (_Combine_)
 
+[.text-justify]
+1. Bukalah terlebih dahulu _layer_ yang akan digabungkan objeknya, atau buat baru _layer_ dengan dua objek yang akan digabungkan. Sebagai contoh seperti gambar berikut :
++
+.Contoh Bentuk Bidang-Bidang yang akan Digabungkan
+image::013-layer-untuk-combine.png[]
++
+2. Pilih dua objek yang akan digabung dengan menggunakan ikon _select_ seperti ini image:008-ikon-select.png[fit=line] dengan menekan tombol *Shift* pada _keyboard_ / papan ketik, sehingga akan terlihat seperti gambar berikut :
++
+.Contoh Bidang-Bidang Berhimpit yang Akan Digabung
+image::014-dua-objek-untuk-combine.png[]
++
+Sebagai tambahan bahwa kedua bidang tersebut saling tumpang tindih, sehingga bagian bidang yang saling tumpang tindih tidak terlihat terarsir.
+3. Pada menu utama pilih *Object->Combine* atau cukup dengan melakukan klik kanan lalu pilih *Combine*, sehingga akan muncul jendela berikut :
++
+.Jendela Agregasi Data
+image::015-window-aggregation-untuk-combine.png[]
++
+Karena kedua bidang biasanya memiliki informasi atribut masing-masing, maka diperlukan kejelasan untuk penggabungan datanya pula, melalui jendela inilah kita memberikan informasi atribut untuk objek baru hasil penggabungan.
+4. Setelah mengisikan informasi untuk penggabungan/agregasi datanya, jika kita menekan tombol *Enter* maka kedua objek yang digabungkan akan terlihat seperti gambar berikut :
++
+.Hasil Penggabungan Kedua Objek
+image::016-objek-hasil-combine.png[]
+
 
 === Operasi Pemisahan (_Split_)
+
+[.text-justify]
+1. Buka _layer_ objek yang akan dilakukan operasi pemisahan, atau membuat _layer_ baru untuk objek yang akan dipisah. Sebagai contoh seperti gambar dibawah ini :
++
+.Objek yang Akan Dipisah / _Split_
+image::017-layer-untuk-split.png[]
++
+2. Pilih objek yang akan dipisah menggunakan ikon image:008-ikon-select.png[fit=line] sehingga objek akan terlihat seperti ini :
++
+.Objek yang Dipilih untuk Dipisah / _Split_
+image::018-objek-terpilih-untuk-split.png[]
++
+3. Pilih menu *Object->Set Target*, sehingga objek menjadi terlihat seperti ini :
++
+.Objek Telah Dijadikan Target Split / Pemisahan
+image::019-objek-terpilih-set-target.png[]
++
+4. Buatkan bidang poligon bantu sebagai batas pemisah objek yang menjadi target, misalkan bidang target akan kita pisah / _split_ menjadi 2 (dua) bagian seperti gambar berikut :
++
+.Objek Poligon Pembantu untuk Memisahkan / Split Objek Target
+image::020-poligon-pembantu-split.png[]
++ 
+5. Pilihlah objek poligon pembantu dengan ikon image:008-ikon-select.png[fit=line] sehingga objek poligon pembantu menjadi terarsir seperti ini :
++
+.Objek Poligon Pembantu Terpilih
+image::021-poligon-pembantu-terpilih-split.png[]
++
+6. Memilih menu *Objects->Split...* sehingga muncul jendela agregasi berikut :
++
+.Jendela Aggregation untuk Pemisahan / Split Objek
+image::022-window-aggregation-untuk-split.png[]
++
+Isikan dengan data atribut baru untuk objek yang dipisah / _split_.
+7. Pilih objek poligon pembantu dengan ikon *select* seperti ini image:008-ikon-select.png[], kemudian tekan tombol *delete* pada _keyboard_ / papan ketik, sehingga hasil akhir akan terlihat seperti ini :
++
+.Hasil Akhir Operasi Pemisahan / Split
+image::023-objek-hasil-split.png[]
 
 
 === Operasi Pemotongan 1 (_Erase_)
 
+[.text-justify]
+1. Buka _layer_ yang objeknya akan dilakukan pemotongan, atau buat _layer_ baru dan gambarkan objek yang akan dilakukan operasi pemotongan 1 (Erase), atau operasi pemotongan di dalam. Berikut adalah contohnya :
++
+.Objek yang Akan Dilakukan Pemotongan
+image::024-layer-untuk-erase.png[]
++
+2. Pilih objek yang akan dipotong menggunakan ikon image:008-ikon-select.png[fit=line], sehingga akan terlihat seperti berikut :
++
+.Objek Terpilih Untuk Dilakukan Operasi Penghapusan
+image::025-objek-terpilih-untuk-erase.png[]
++
+3. Pilih menu *Objects->Set Target*, sehingga objek terpilih menjadi terlihat seperti ini :
++
+.Objek Terpilih Sudah Menjadi Target Pemotongan
+image::026-objek-tertarget-untuk-erase.png[]
++
+4. Buat poligon sebagai objek bantu untuk melakukan pemotongan, sebagai contoh seperti gambar berikut :
++
+.Objek Pembantu untuk Melakukan Pemotongan
+image::027-objek-pembantu-erase.png[]
++
+5. Pilih objek pembantu dengan menggunakan ikon *select* seperti ini image:008-ikon-select.png[fit=line], sehingga objek pembantu akan terlihat seperti ini :
++
+.Objek Pembantu Terpilih
+image::028-objek-pembantu-erase-terpilih.png[]
++
+6. Pilih menu *Objects->Erase* untuk menghapus bagian yang akan di dalam objek pembantu. Nantinya akan muncul jendela _Aggregation_ seperti ini :
++
+.Jendela Aggregation untuk Objek yang Tersisa
+image::029-window-aggregation-untuk-erase.png[]
++
+7. Setelah menekan tombol *OK* pada jendela _aggregation_, maka objek sebenarnya sudah terpisah, seperti gambar berikut ini contohnya :
++
+.Objek Telah Terpotong
+image::030-objek-telah-terpotong.png[]
++
+8. Hapus objek pembantu dengan ikon *select* image:008-ikon-select.png[fit=line], kemudian memilih objek pembantu tersebut dan menekan tombol *delete* pada _keyboard_ / papan ketik, sehingga akan didapat hasil akhir berikut :
++
+.Hasil Akhir Pemotongan
+image::031-hasil-akhir-erase.png[]
+
 
 === Operasi Pemotongan 2 (_Erase Outside_)
 
+[.text-justify]
+1. Buka terlebih dahulu _layer_ yang objeknya akan dipotong, atau buat _layer_ baru dan buatkan objek yang akan dilakukan operasi pemotongan. Sebagai contoh seperti gambar berikut :
++
+.Layer Objek yang Akan Dipotong
+image::032-layer-untuk-erase-2.png[]
++
+2. Pilih objek yang akan di potong dengan menggunakan ikon image:008-ikon-select.png[fit:line] sehingga objek akan terlihat seperti ini :
++
+.Objek yang Terpilih Untuk Dilakukan Pemotongan
+image::033-objek-terpilih-untuk-erase-2.png[]
++
+3. Pilih menu *Objects->Set Target* sehingga objek yang akan dipotong terlihat seperti ini :
++
+.Objek Tertarget untuk Dilakukan Pemotongan
+image::034-objek-tertarget-untuk-erase-2.png[]
++
+4. Buat objek poligon bantuan untuk melakukan pemotongan objek, nantinya objek diluar poligon bantuan ini akan terhapus, sebagai contoh seperti gambar berikut :
++
+.Objek Poligon Bantuan untuk Melakukan Pemotongan
+image::035-poligon-bantuan-untuk-erase-2.png[]
++
+5. Pilih objek poligon bantuan dengan menggunakan ikon image:008-ikon-select.png[fit=line], sehingga objek tersebut akan terlihat seperti ini :
++
+.Objek Poligon Bantuan Terpilih
+image::036-poligon-bantuan-terpilih-untuk-erase-2.png[]
++
+6. Memilih menu *Objects->Erase Outside...*, sehingga muncul jendela _aggregate_ seperti ini :
++
+.Jendela Aggregate untuk Pemotongan
+image::037-jendela-aggregate-untuk-erase-2.png[]
++
+Isiannya adalah berupa atribut data untuk objek yang nantinya masih tersisa.
+7. Setelah dilakukan pengisian atribut data untuk objek yang terpisah, hasilnya akan terlihat seperti gambar berikut :
++
+.Objek yang Masih Tersisa dari Hasil Pemotongan
+image::038-objek-target-terpotong-erase-2.png[]
++
+8. Pilih objek poligon bantuan dengan menggunakan ikon image:008-ikon-select.png[fit=line], kemudian tekan tombol *delete* pada _keyboard_ / papan ketik, sehingga menghasilkan objek seperti gambar di bawah ini :
++
+.Hasil Akhir Pemotongan
+image::039-hasil-erase-2.png[]
+
 
 === Menyambung Vertex (_Snap_)
+
+[.text-justify]
+1. Buka _layer_ yang objeknya saling terpisah atau bertumpukan kemudian akan disambungkan / dihimpitkan, atau sebagai contoh dapat membuat _layer_ baru untuk hal ini seperti contoh gambar berikut :
++
+.Contoh Dua Objek yang Akan Disambung
+image::040-layer-sambung-vertex.png[]
++
+2. Pilih objek yang akan disambung dengan menggunakan ikon _select_ image:008-ikon-select.png[fit=line], sehingga objek akan terlihat seperti gambar berikut :
++
+.Objek yang Terpilih untuk Dilakukan Reshape Penyambungan
+image::041-objek-reshape-terpilih.png[]
++
+3. Tekan huruf *S* pada _keyboard_ / papan ketik. Perhatikan tanda _Snap_ yang muncul di bagian bawah jendela MapInfo yang menandakan, berarti _Snap_ aktif. Untuk menonaktifkan _Snap_, tekan *S* kembali. Aktifnya fungsi snap ini ditandai seperti gambar berikut :
++
+.Tanda Tombol Snap Aktif
+image::042-snap-aktif.png[]
++
+4. Pilih ikon _reshape_ image:043-ikon-reshape.png[fit=line], dan pindahkan titik-titik objek agar berhimpit / menyambung seperti gambar berikut :
++
+.Hasil Reshape Objek
+image::044-reshape-snap-ke-objek-lain.png[]
 

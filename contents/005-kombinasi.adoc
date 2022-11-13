@@ -1,0 +1,8 @@
+== PENGGABUNGAN DENGAN DATA ATRIBUT EKSTERNAL
+
+[.text-justify]
+Kita sudah melihat ketentuan yang terbentuk sebagai standar data spasial pada sistem yang digunakan PBB-P2, terutama data atribut yang melekat pada _layer_ bidang / bumi hanya berisi data Nomor Objek Pajak dan luasan bidang. 
+
+[.text-justify]
+Untuk kebutuhan analisis biasanya kita membutuhkan data atribut lain yang datang dari sumber data diluar yang sudah ada seperti data SISMIOP. Kali ini kita akan coba melakukan penggabungan data peta yang sudah ada dengan data yang berasal dari SISMIOP. Berikut langkahnya :
+

@@ -1,0 +1,68 @@
+== QUERY
+
+[.text-justify]
+Data-data pada MapInfo selain berbentuk data spasial, terdapat pula data atribut yang kita lihat dalam tabel-tabel seperti kolom / _field_ `d_nop` pada tabel _layer_ bidang / bumi yang menyimpan informasi Nomor Objek Pajak, dan `d_luas` yang menyimpan data luas bidang yang telah digambar.
+
+[.text-justify]
+Untuk melihat data atribut ini, dapat dilakukan dengan cara berikut :
+
+[.text-justify]
+1. Memilih menu *Window->New Browser Window* sehingga muncul jendela berikut :
++
+.Jendela Browse Table
+image::065-jendela-browse-tabel.png[]
++
+2. Memilih tabel mana yang hendak dibuka, dalam contoh kali ini, kita coba untuk membuka tabel milik _layer_ `3329010001`, ketika tekan tombol *OK* maka akan muncul jendela seperti ini :
++
+.Isi Tabel Layer Bidang Objek Pajak
+image::066-isi-tabel-bidang.png[]
+
+[.text-justify]
+Jika melihat isi dari tabel ini, biasanya data pada _field_ `d_luas` belum muncul, bagaimana cara memunculkannya dapat mengikuti langkah berikut :
+
+[.text-justify]
+1. Pilih menu *Table->Update Column* sehingga nantinya muncul jendela berikut :
++
+.Jendela Update Kolom
+image::067-jendela-update-column.png[]
++
+2. Biasanya perhatikan isian *Column to Update*, kolom ini nantinya akan kita ubah isinya, untuk selanjutnya tekan tombol *Assist...* sehingga muncul jendela berikut :
++
+.Jendela Expression Untuk Mengisi d_luas
+image::068-jendela-expression-untuk-d_luas.png[]
++
+3. Isikan persis seperti gambar tersebut, dan perhatikan bahwa satuan yang digunakan adalah *"sq m"* atau meter persegi. Cobalah tekan tombol *Verify* sampai dinyatakan _syntax is correct_, lalu tekan tombol *OK* sehingga tabel terisi dengan angka luasan masing-masing bidang seperti gambar berikut :
++
+.Hasil perhitungan Luas Bidang
+image::069-hasil-update-column.png[]
+
+[.text-justify]
+Sekarang kita coba untuk operasi yang lebih spasifik ke _query_, kita akan memilih berdasarkan blok tertentu (misal kita akan memilih blok 2), berikut adalah langkah-langkahnya :
+
+[.text-justify]
+1. Memilih menu *Query->Select* sehingga muncul jendela *Select* berikut :
++
+.Jendela Select
+image::070-jendela-select.png[]
++
+2. Pada bagian _that satisfy_, tekan tombol *Assist* untuk mempermudah penggunaan operator dan verifikasi kode, sehingga nantinya akan muncul jendela Assist berikut :
++
+.Jendela Expression
+image::071-jendela-expression.png[]
++
+3. Isikan dengan kode berikut :
++
+```
+mid$(d_nop,11,3)="002"
+```
++
+Jangan lupa untuk melakukan verifikasi kode setelahnya.
+4. Setelah menekan tombol *OK*, maka akan kembali lagi ke jendela *Select*, tekan *OK* kembali untuk menampilkan hasilnya yang disajikan dalam bentuk tabel. Berikut hasilnya :
++
+.Tabel Hasil Select
+image::072-hasil-select.png[]
++
+5. Untuk mengetahui letaknya di peta, aktifkan dahulu petanya dalam contoh ini dengan memilih menu *Window->1. _3329010001 Map*, kemudian pilih menu *Query->Find Selection->In Current Map Window*, atau tekan *Ctrl+G*. Objek terpilih nantinya akan terarsir seperti gambar berikut :
++
+.Blok Terpilih Ditandai dengan Bidang Terarsir
+image::073-hasil-pencarian-blok.png[]
